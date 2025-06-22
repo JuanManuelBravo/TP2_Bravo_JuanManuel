@@ -1,0 +1,165 @@
+    1  cat /proc/cpuinfo
+    2  cat /proc/meminfo
+    3  ssh-keygen -t ed25519
+    4  cat $HOME/.ssh/*.pub
+    5  cd
+    6  mkdir repogit
+    7  ll
+    8  cd repogit
+    9  git clone git@github.com:JuanManuelBravo/TP1_AySO_Bravo_JuanManuel.git
+   10  sudo apt install git
+   11  git clone git@github.com:JuanManuelBravo/TP1_AySO_Bravo_JuanManuel.git
+   12  cd TP1_AySO_Bravo_JuanManuel/
+   13  pwd
+   14  ls -l
+   15  cat /etc/os-release 
+   16  man grep
+   17  grep HOME_URL /etc/os-release 
+   18  man grep
+   19  grep -i Home_url /etc/os-release 
+   20  grep -i Home_url /etc/os-release > datos_url.txt
+   21  ls
+   22  whoami
+   23  echo "Usuario=$(whoami)" > datos_usuario.txt
+   24  ls
+   25  git add .
+   26  git config --global user.email "juanmanuelbravo8@gmail.com"
+   27  git config --global user.name "Juanma"
+   28  git commit -m "Add: agregado 1er ejercicio sobre datos_usuarios.txt"
+   29  git status
+   30  git push
+   31  grep "model name" /proc/cpuinfo | head -n1 >> datos_usuarios.txt
+   32  git add datos_usuarios.txt 
+   33  git commit -m "Añadiendo informacion de CPU"
+   34  git push
+   35  ll
+   36  cd repogit
+   37  ll
+   38  cd TP1_AySO_Bravo_JuanManuel/
+   39  LL
+   40  ll
+   41  cat <<EOF >> README.md
+   42  Alumno: Juan Manuel
+   43  Division:115
+   44  Turno:Manana
+   45  EOF
+   46  git add README.md datos_usuarios.txt
+   47  git commit -m "Add anadiendo readme y datos de usuarios"
+   48  git push
+   49  mkdir -p ~/materia{1,2}/uni{1,2,3}
+   50  ll
+   51  cd
+   52  ll
+   53  tree ~/material ~/materia2
+   54  sudo apt install tree
+   55  tree ~/material ~/materia2
+   56  tree ~/materia1 ~/materia2
+   57  nano script_dir.sh
+   58  chmod +x script_dir.sh 
+   59  /script_dir.sh
+   60  chmod +x script_dir.sh
+   61  /script_dir.sh
+   62  ll
+   63  git add .
+   64  /script_dir.sh
+   65  ll
+   66  ./script_dir.sh 
+   67  git add .
+   68  git commit -m"ADD: añadiendo script"
+   69  git commit -m "ADD: añadiendo script"
+   70  git push
+   71  cd repogit/
+   72  ll
+   73  cd TP1_AySO_Bravo_JuanManuel/
+   74  ll
+   75  ./script_dir.sh 
+   76  history -a
+   77  ll
+   78  git add .
+   79  git status
+   80  git commit -m "añadiendo script"
+   81  git push
+   82  history -a
+   83  cp ~/.bash_history ./Historial_comando_<Bravo>.txt
+   84  cp ~/.bash_history ./Historial_comandos_bravo.txt
+   85  ll
+   86  git add .
+   87  git commit -m "Add: historial de comandos"
+   88  git push
+   89  ll
+   90  clear
+   91  ls
+   92  ll
+   93  ls
+   94  ls -l
+   95  clear
+   96  cd repogit/
+   97  cd
+   98  ll
+   99  cd repogit/
+  100  ll
+  101  cd TP1_AySO_Bravo_JuanManuel/
+  102  ls -l
+  103  clear
+  104  cd
+  105  clear
+  106  ls -l
+  107  git status
+  108  git clone https://github.com/JuanManuelBravo/TP2_Bravo_JuanManuel.git
+  109  ls -l
+  110  cd TP2_Bravo_JuanManuel/
+  111  ls
+  112  git status
+  113  sudo fdisk -l
+  114  fdisk /dev/sdb
+  115  sudo fdisk /dev/sdb
+  116  free
+  117  free -h
+  118  sudo mkswap /dev/sdd1
+  119  sudo mkswap /dev/sdb1
+  120  free -h
+  121  sudo swapon /dev/sdb1
+  122  free -h
+  123  sudo fdisk -l
+  124  sudo fdisk /dev/sdc
+  125  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+  126  sudo wipefs -a /dev/sdc1
+  127  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+  128  pvs
+  129  sudo apt install lvm2
+  130  sudo wipefs -a /dev/sdc1
+  131  pvs
+  132  sudo pvs
+  133  fdisc l
+  134  fdisc -l
+  135  fdisk -l
+  136  sudo fdisk -l
+  137  wipefs
+  138  sudo wipefs -a /dev/sdb2
+  139  sudo pvcreate /dev/sdb2 /dev/sdb3 /dev/sdb5 /dev/sdb6 /dev/sdc1 /dev/sdc2
+  140  pvs
+  141  sudo pvs
+  142  sudo vgcreate vg_datos /dev/sdc1 /dev/sdb2
+  143  vgs
+  144  sudo vgs
+  145  sudo pvs
+  146  sudo vgcreate vg_web /dev/sdc2
+  147  sudo pvs
+  148  sudo lvcreate -L 1G vg_web -n lv_web1
+  149  sudo lvcreate -L 1G vg_web -n lv_web2
+  150  sudo lvcreate -L 1G vg_web -n lv_web3
+  151  sudo lvs
+  152  sudo pvs
+  153  sudo fdisk -l
+  154  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+  155  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+  156  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+  157  sudo lsblk -f
+  158  sudo pvs > pvs.txt
+  159  ll
+  160  cd TP2_Bravo_JuanManuel/
+  161  ls
+  162  sudo pvs > pvs.txt
+  163  sudo vgs > vgs.txt
+  164  sudo lvs > lvs.txt
+  165  history > historial_lvm.txt
